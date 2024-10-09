@@ -29,11 +29,17 @@ void echoes (char * echPtr) {
 
 void newspeak (char * newPtr) {
   int i = 0;
+  int cumulate = 0;
 
-  for (i = 0; *(newPtr + i) != '\n'; i++)
-    if ((*(newPtr + i) >= 'a') && (*(newPtr + i) <= 'z'))
-      *(newPtr + i) += (('b' - 'a' + *(newPtr + i)) < 26)? '!' : *(newPtr + i);
+  for (i = 0; *(newPtr + i) != '\n'; i++) {
+    
+    if ((*(newPtr + i) >= 'a') && (*(newPtr + i) <= 'z')) {
+      *(newPtr + i) += ('f' - 'a');
+      if (*(newPtr + i) > 'z')
+	*(newPtr + i) -= 26;
+    }
 
+  }
 }
 
 void finalcut (char * finalPtr) {

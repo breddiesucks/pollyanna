@@ -1,6 +1,7 @@
 # pollyanna
-I believe in you
+(I believe in you)
 
-A poor attempt of reverse engineering for encrypting
+A reverse-engineered barebone encryption TUI, which takes a fresh approach towards encryption keys, making it more ergonomic for domestic use.
 
-In progress, will be elaborated on the course of time
+Statutory Warning: DO NOT USE THIS IN CASE YOU NEED TO STORE IMPORTANT DATA
+

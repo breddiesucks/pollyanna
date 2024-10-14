@@ -7,13 +7,14 @@
 
 #define MAX 1000
 
-void newspeak (char *); // it encodes
-
 int main() {
   char mystr[MAX] = {' '};
 
   echoes(mystr);
-  devil(mystr);
+  speakspell(mystr);
+
+  paintitblack(mystr, 'd');
+  speakspell(mystr);
 
   return 0;
 }

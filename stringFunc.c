@@ -9,7 +9,7 @@ void echoes (char * echPtr) {
   *(echPtr + ++i) = '\0';
 }
 
-void devil (char * finalPtr) {
+void speakspell (char * finalPtr) {
   int i = 0;
 
   for (i = 0; *(finalPtr + i) != '\0'; i++)

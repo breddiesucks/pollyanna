@@ -5,20 +5,20 @@
 #include <stdlib.h>
 #include "pollyanna.h"
 
-#define MAX 1000
-
 int main() {
-  char mystr[MAX] = {' '};
-  char refstr[MAX] = {' '};
+  char mystr[ARRMAX] = {' '};
+  char refstr[ARRMAX] = {' '};
 
+  printf("Enter the string to be encrypted: ");
   speakspell(mystr);
-  echoes(mystr);
 
+  printf("Enter the encryption string: ");
   speakspell(refstr);
-  echoes(refstr);
 
-  //paintitblack(mystr, *(refstr));
-  whoshotya(mystr, refstr);
+  paintitblack(mystr, *(refstr));
+  echoes(mystr);
+  //whoshotya(mystr, refstr);
+  //paranoid(mystr, *(refstr));
   echoes(mystr);
 
   return 0;

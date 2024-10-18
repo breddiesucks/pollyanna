@@ -14,11 +14,14 @@ int main() {
 
   printf("Enter the encryption string: ");
   speakspell(refstr);
+  echoes(mystr);
 
+  // encryption
   paintitblack(mystr, *(refstr));
   echoes(mystr);
-  //whoshotya(mystr, refstr);
-  //paranoid(mystr, *(refstr));
+
+  // decryption
+  paranoid(mystr, *(refstr));
   echoes(mystr);
 
   return 0;

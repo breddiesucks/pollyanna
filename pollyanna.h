@@ -1,14 +1,23 @@
+// personal ground-up library for specific tasks
+// this may seem daft, but hey, making your own library sounds cool to me
+
 #ifndef _POLLYANNA_H_
 #define _POLLYANNA_H_
 
 #define ARRMAX 1000
 
+// string functions
 void speakspell (char * str); // writes strings
 void echoes (char * str); // prints strings
-void paintitblack (char * ptr, char ref); // encodes based on a single character - for debugging
-void whoshotya (char * ptr, char * refptr); // encodes with reference to a string
-void paranoid (char * ptr, char ref); // decoder based on one character
-void hitemup (char * ptr, char * refptr); // decoder with reference to a string
 
+// key interpretation
+void changeling (char * keyptr, FILE * fileseed);
+
+// encryption setup
+void paintitblack (char * base, char ref); // encrypts one char
+void paranoid (char * base, char ref); // decrypts one char
+
+void decades (char * base, char * ref);
+void handthatfeeds (char * base, char * ref);
 
 #endif

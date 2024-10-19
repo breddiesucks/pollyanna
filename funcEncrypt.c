@@ -5,38 +5,40 @@
 #include <stdlib.h>
 #include "pollyanna.h"
 
-// char key encryption
-void paintitblack (char * ptr, char ref) {
-  int i = 0;
-
-  for (i = 0; *(ptr + i) != '\0'; i++)
-    if ((*(ptr + i) >= ' ') && (*(ptr + i) <= '~')) {
-      *(ptr + i) = 32 + (((*(ptr + i) - 32) + (ref - 32)) % 96);
-    }
+// encryption - one process version
+void paintitblack (char * base, char ref) {
+  if ((*base >= ' ') && (*base <= '~'))
+    *base = 32 + ((*base - 32) + (ref - 32)) % 96;
 }
 
-// char key decription
-// NOTE: for now, don't have your *(ptr + i) - ref be greater than 96
-// I will fix it asap; until then, fiddle around in shorter ranges
-void paranoid (char * ptr, char ref) {
-  int i = 0;
-
-  for (i = 0; *(ptr + i) != '\0'; i++)
-    if ((*(ptr + i) >= ' ') && (*(ptr + i) <= '~')) {
-      *(ptr + i) = 32 + (((*(ptr + i)) - ref) % 96);
-    }
+// decryption - one process version
+void paranoid (char * base, char ref) {
+  if ((*base >= ' ') && (*base <= '~'))
+    *base = 32 + ((*base - ref < 0)? (96 + (*base - ref)) : ((*base - ref) % 96));
 }
 
-/*
-void whoshotya (char * ptr, char * refptr) {
+// encryption - string edition
+void decades (char * base, char * ref) {
   int i = 0;
   int j = 0;
 
-  for (i = 0, j = 0; *(ptr + i) != '\0'; i++, j++) {
-    if (*(refptr + j) = '\n')
+  for (i = 0, j = 0; *(base + i) != '\0'; i++, j++) {
+    if (*(ref + j) == '\0')
       j = 0;
-    if ((*(ptr + i) >= ' ') && (*(ptr + i) <= 'z'))
-      *(ptr + i) = 32 + (((*(ptr + i) - 32) + (*(refptr + j) - 32)) % 96);
+
+    paintitblack ((base + i), *(ref + j));
   }
 }
-*/
+
+// decryption - string edition
+void handthatfeeds (char * base, char * ref) {
+  int i = 0;
+  int j = 0;
+
+  for (i = 0, j = 0; *(base + i) != '\0'; i++, j++) {
+    if (*(ref + j) == '\0')
+      j = 0;
+
+    paranoid ((base + i), *(ref + j));
+  }
+}

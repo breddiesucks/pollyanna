@@ -10,6 +10,10 @@
 void speakspell (char * str); // writes strings
 void echoes (char * str); // prints strings
 
+// other string utils
+int kaos (char * ptr); // measure the string
+void knockin (char * ptrA, char * ptrB); // copies the one to another string
+
 // key interpretation
 void changeling (char * keyptr, FILE * fileseed);
 

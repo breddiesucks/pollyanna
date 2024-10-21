@@ -1,6 +1,11 @@
 # pollyanna
 TUI-driven Encryption Tool for Domestic Use-Case
 
+ATTENTION:
+REPO MIGRATED TO  [link][https://codeberg.org/breddiesucks/pollyanna "CODEBERG"]. RAISON D'ETRE IS PRETTY OBVIOUS WHEN YOU SEE A LINUX DAILY DRIVER.
+
+https://codeberg.org/breddiesucks/pollyanna
+
 Pollyanna is a simple implementation of encryption/decryption aimed at layman use, with an experimental approach for encryption key assignment.
 
 Program Status:

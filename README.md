@@ -2,7 +2,7 @@
 TUI-driven Encryption Tool for Domestic Use-Case
 
 ATTENTION:
-REPO MIGRATED TO  [link][https://codeberg.org/breddiesucks/pollyanna "CODEBERG"]. RAISON D'ETRE IS PRETTY OBVIOUS WHEN YOU SEE A LINUX DAILY DRIVER.
+REPO MIGRATED TO [CODEBERG](https://codeberg.org/breddiesucks/pollyanna). RAISON D'ETRE IS PRETTY OBVIOUS WHEN YOU SEE A LINUX DAILY DRIVER.
 
 https://codeberg.org/breddiesucks/pollyanna
 
